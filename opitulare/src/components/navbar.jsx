@@ -4,9 +4,12 @@ import {
     Box, 
     Button,
     Container, 
+    Drawer, 
     IconButton, 
     ToggleButton, 
-    Toolbar 
+    Toolbar,
+    MenuItem,
+    Divider
 
 } from "@mui/material";
 import { styled, alpha } from "@mui/material/styles";
@@ -26,6 +29,10 @@ const StyledToolbar = styled(Toolbar) (({ theme }) => ({
 const Navbar = () => {
     const [ openNavbar, setOpenNavbar ] = useState(false);
 
+
+    const toggleDrawer = (newOpen) => () => {
+        setOpenNavbar(newOpen);
+    }
     return (
 
         <AppBar 
@@ -82,10 +89,49 @@ const Navbar = () => {
                             <MenuIcon /> /* Add Later */
                         </IconButton>
 
+                        <Drawer
+                            anchor="top"
+                            open={open}
+                            onClose={toggleDrawer(false)}
+                            PaperProps={{
+                                sx: {
+                                    top: "var(--template-frame-height, 0px)"
+                                },
+                            }}
+                        >
+                            <Box sx={{ p: 2, backgroundColor: "Background.default"}}>
+                                <Box 
+                                    sx={{
+                                        display: "flex",
+                                        justifyContent: "flex-end"
+                                    }}
+                                >
+                                    <IconButton onClick={toggleDrawer(false)}>
+                                        <CloseRoundedIcon /> /* add later */
+                                    </IconButton>
+                                </Box>
+                                <MenuItem>Features</MenuItem>
+                                <MenuItem>Testimonials</MenuItem>
+                                <MenuItem>Highlights</MenuItem>
+                                <MenuItem>Pricing</MenuItem>
+                                <MenuItem>FAQ</MenuItem>
+                                <MenuItem>Blog</MenuItem>
+                                <Divider sx={{ my: 3 }} />
+                                <MenuItem>
+                                    <Button color="primary" variant="contained" fullWidth>
+                                        Sign up
+                                    </Button>
+                                </MenuItem>
+                                <MenuItem>
+                                    <Button color="primary" variant="outlined" fullWidth>
+                                        Sign in
+                                    </Button>
+                                </MenuItem>
+                            </Box>
+                        </Drawer>
                     </Box>
                 </StyledToolbar>
             </Container>
-
         </AppBar>
 
     )
