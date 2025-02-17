@@ -1,10 +1,13 @@
 import Navbar from "@/components/navbar";
+import Homepage from "@/pages/homepage";
 import Image from "next/image";
+
 
 export default function Home() {
   return (
-    <div className="">
+    <main className="flex flex-col min-h-screen items-center justify-between p-6 md:p-12 lg:p-24">
         <Navbar />
-    </div>
+        <Homepage />
+    </main>
   );
 }

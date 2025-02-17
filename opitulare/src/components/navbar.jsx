@@ -110,12 +110,10 @@ const Navbar = () => {
                                         <CloseRoundedIcon /> /* add later */
                                     </IconButton>
                                 </Box>
-                                <MenuItem>Features</MenuItem>
-                                <MenuItem>Testimonials</MenuItem>
-                                <MenuItem>Highlights</MenuItem>
-                                <MenuItem>Pricing</MenuItem>
-                                <MenuItem>FAQ</MenuItem>
-                                <MenuItem>Blog</MenuItem>
+                                <MenuItem>Home</MenuItem>
+                                <MenuItem>About</MenuItem>
+                                <MenuItem>Contact</MenuItem>
+                                <MenuItem>Help</MenuItem>
                                 <Divider sx={{ my: 3 }} />
                                 <MenuItem>
                                     <Button color="primary" variant="contained" fullWidth>
