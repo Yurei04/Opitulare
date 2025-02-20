@@ -11,18 +11,16 @@ import {
     MenuItem,
     Divider
 } from "@mui/material";
-import { styled, alpha } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import MenuIcon from '@mui/icons-material/Menu';
 
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+const StyledToolbar = styled(Toolbar)({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: theme.vars
-        ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.4)`
-        : alpha(theme.palette.background.default, 0.4),
+    backgroundColor: "#f0f4ff",
     padding: "8px 12px"
-}));
+});
 
 const Navbar = () => {
     const [openNavbar, setOpenNavbar] = useState(false);
@@ -36,18 +34,24 @@ const Navbar = () => {
             position="fixed"
             sx={{
                 boxShadow: 0,
-                bgcolor: "transparent",
+                bgcolor: "#ffffff",
                 backgroundImage: "none",
                 mt: "calc(var(--template-frame))",
-                color: 'primary.main'
+                color: '#1976d2'
             }}
         >
             <Container maxWidth="lg">
                 <StyledToolbar variant="dense" disableGutters>
                     <Box sx={{ display: "flex", flexGrow: 1, alignItems: "center", px: 0 }}>
                         <Box sx={{ display: { xs: "none", md: "flex" } }}>
-                            {['Home', 'About', 'Contact', 'Help'].map((item) => (
-                                <Button key={item} variant="text" color="info" size="small">
+                            {['Home', 'About', 'Goal', 'Contact', 'Help'].map((item) => (
+                                <Button 
+                                    key={item} 
+                                    variant="text" 
+                                    color="primary" 
+                                    size="small"
+                                    href={`#${item.toLowerCase()}`}
+                                >
                                     {item}
                                 </Button>
                             ))}
@@ -59,10 +63,10 @@ const Navbar = () => {
                         gap: 1,
                         alignItems: "center"
                     }}>
-                        <Button color="primary" variant="text" size="small">
+                        <Button color="primary" variant="text" size="small" href="/login">
                             Login
                         </Button>
-                        <Button color="primary" variant="outlined" size="small">
+                        <Button color="primary" variant="outlined" size="small" href="/signup">
                             Signup
                         </Button>
                     </Box>
@@ -82,7 +86,7 @@ const Navbar = () => {
                                 },
                             }}
                         >
-                            <Box sx={{ p: 2, bgcolor: "background.default" }}>
+                            <Box sx={{ p: 2, bgcolor: "#ffffff" }}>
                                 <Box
                                     sx={{
                                         display: "flex",
@@ -94,16 +98,16 @@ const Navbar = () => {
                                     </IconButton>
                                 </Box>
                                 {['Home', 'About', 'Contact', 'Help'].map((item) => (
-                                    <MenuItem key={item}>{item}</MenuItem>
+                                    <MenuItem key={item} component="a" href={`#${item.toLowerCase()}`}>{item}</MenuItem>
                                 ))}
                                 <Divider sx={{ my: 3 }} />
                                 <MenuItem>
-                                    <Button color="primary" variant="contained" fullWidth>
+                                    <Button color="primary" variant="contained" fullWidth href="/signup">
                                         Sign up
                                     </Button>
                                 </MenuItem>
                                 <MenuItem>
-                                    <Button color="primary" variant="outlined" fullWidth>
+                                    <Button color="primary" variant="outlined" fullWidth href="/login">
                                         Sign in
                                     </Button>
                                 </MenuItem>
