@@ -3,6 +3,7 @@ import Homepage from "@/pages/homepage";
 import Blog from "@/pages/blog";
 import Footer from "@/pages/footer"
 import Image from "next/image";
+import Goals from "@/pages/goal";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <Navbar />
         <Homepage />
         <Blog />
+        <Goals />
         <Footer />
     </main>
   );

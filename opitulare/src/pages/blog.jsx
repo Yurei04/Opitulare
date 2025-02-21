@@ -1,6 +1,7 @@
 "use client"
 import React from "react";
-import Masonry from "../components/masonry"
+import Masonry from "../components/masonry";
+import Accordion from "@/components/accordion";
 
 const Blog = () => {
     return (
@@ -11,6 +12,7 @@ const Blog = () => {
 
             <div>
                 <Masonry />
+                <Accordion />
             </div>
         </section>
     )
