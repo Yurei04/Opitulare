@@ -2,7 +2,9 @@
 
 const Blog = () => {
     return (
-        
+        <section>
+            
+        </section>
     )
 }
 
