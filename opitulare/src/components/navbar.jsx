@@ -71,8 +71,8 @@ const Navbar = () => {
                         </Button>
                     </Box>
 
-                    <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1 }}>
-                        <IconButton aria-label="Menu Button" onClick={toggleDrawer(true)}>
+                    <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1, justifyContent: "flex-end", width: "100%" }}>
+                        <IconButton aria-label="Menu Button" onClick={toggleDrawer(true)} sx={{ mr: 2 }}>
                             <MenuIcon />
                         </IconButton>
 

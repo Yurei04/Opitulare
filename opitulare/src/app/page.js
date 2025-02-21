@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar";
 import Homepage from "@/pages/homepage";
 import Blog from "@/pages/blog";
+import Footer from "@/pages/footer"
 import Image from "next/image";
 
 
@@ -10,6 +11,7 @@ export default function Home() {
         <Navbar />
         <Homepage />
         <Blog />
+        <Footer />
     </main>
   );
 }
