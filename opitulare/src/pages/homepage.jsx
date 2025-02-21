@@ -7,8 +7,8 @@ import Link from 'next/link';
 
 const Homepage = () => {
   return (
-    <section className="relative lg:py-22 py-20 homepage-container bg-cover bg-center bg-no-repeat">
-      <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center bg-opacity-80 bg-black">
+    <section className="relative lg:py-22 py-20 homepage-container items-center bg-cover bg-center bg-no-repeat">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-8 items-center bg-opacity-80">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
