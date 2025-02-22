@@ -7,7 +7,23 @@
     <title>ChangeFont</title>
 </head>
 <body>
-    
+    <div id="font">
+        <h1>Change your Font</h1>
+        <div class="switch-container">
+            <span class="tooltip">Font</span>
+            <label class="switch">
+                <input type="checkbox" id="dyslexic-font-switch" title="checkbox">
+                <span class="slider"></span>
+            </label>
+            <span>Dyslexic-Friendly</span>
+        </div>
+    </div>
+
+    <div id="secret-help-btn" style="display: none;">
+        <p>Are you safe? If not, type "I need help"</p>
+        <input type="text" id="helpInput" placeholder="Type 'I need help'">
+        <button id="helpButton" disabled>Confirm Help</button>
+    </div>
 
     <script src="popup.js"></script>
 </body>
