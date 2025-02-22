@@ -1,36 +1,50 @@
 'use client'
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Switch, FormControlLabel } from '@mui/material';
+import { Switch, FormControlLabel, Accordion } from '@mui/material';
 import ActionAreaCard from './actionAreaCard';
+import Card from "@/components/card"
 
 export default function ParentComponent() {
     const [activeIndex, setActiveIndex] = React.useState(0);
+    const [openModal, setOpenModal] = React.useState(false);
 
     const handleActivate = (index) => {
         setActiveIndex(index);
     };
 
+    const handleOpenModal = () => {
+        setOpenModal(true);
+    }
+
+    const handleCloseModal = () => {
+        setOpenModal(false)
+    }
+
     const sections = [
         {
             label: "To Help",
             description: ["lorem", "lorem"],
-            images: ["/images/help.png"]
+            images: ["/images/help.png", "/images/help.png",],
+            contents: "lorem lorem lorem lorem lorem lorem"
         },
         {
             label: "Become Aware",
             description: ["lorem", "lorem"],
-            images: ["/images/aware.png"]
+            images: ["/images/help.png", "/images/help.png",],
+            contents: "lorem lorem lorem lorem lorem lorem"
         },
         {
             label: "To Inform",
             description: ["lorem", "lorem"],
-            images: ["/images/inform1.png"]
+            images: ["/images/help.png", "/images/help.png",],
+            contents: "lorem lorem lorem lorem lorem lorem"
         },
         {
             label: "To Educate",
             description: ["lorem", "lorem"],
-            images: ["/images/inform2.png"]
+            images: ["/images/help.png", "/images/help.png",],
+            contents: "lorem lorem lorem lorem lorem lorem"
         }
     ];
 
@@ -45,11 +59,19 @@ export default function ParentComponent() {
                     />
                 ))}
             </Box>
-            <ActionAreaCard 
-                title={sections[activeIndex].label}
-                description={sections[activeIndex].description.join(", ")} 
-                imageSrc={sections[activeIndex].images[0]} 
-            />
+            <Box sx={{ display:"flex", flexDirection: "row", gap: 3}}>
+                <ActionAreaCard 
+                    title={sections[activeIndex].label}
+                    description={sections[activeIndex].description.join(", ")} 
+                    imageSrc={sections[activeIndex].images[0]} 
+                />
+                <Card 
+                    title={sections[activeIndex].title}
+                    contents={sections[activeIndex].contents}
+                
+                />
+
+            </Box>
         </Box>
     );
 }

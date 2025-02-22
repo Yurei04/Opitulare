@@ -9,7 +9,7 @@ export default function SimpleGrow({ index, activeIndex, images }) {
 
   return (
     <Grow in={isActive}>
-      <Box sx={{ display: isActive ? 'flex' : 'none', gap: 2, flexWrap: 'wrap', justifyContent: 'center' }}>
+      <Box sx={{ display: isActive ? 'flex' : 'none', gap: 2, flexWrap: 'wrap', justifyContent: 'center',}}>
         {images.map((image, idx) => (
           <Paper
             key={idx}

@@ -18,7 +18,10 @@ const StyledToolbar = styled(Toolbar)({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f0f4ff",
+    backgroundColor: "#1A1A2E", 
+    border: "2px solid #2196F3", 
+    borderRadius: "8px",
+    boxShadow: "0px 4px 8px rgba(33, 150, 243, 0.3)", 
     padding: "8px 12px"
 });
 
@@ -34,7 +37,7 @@ const Navbar = () => {
             position="fixed"
             sx={{
                 boxShadow: 0,
-                bgcolor: "#ffffff",
+                bgcolor: "transparent",
                 backgroundImage: "none",
                 mt: "calc(var(--template-frame))",
                 color: '#1976d2'
@@ -73,7 +76,7 @@ const Navbar = () => {
 
                     <Box sx={{ display: { xs: "flex", md: "none" }, gap: 1, justifyContent: "flex-end", width: "100%" }}>
                         <IconButton aria-label="Menu Button" onClick={toggleDrawer(true)} sx={{ mr: 2 }}>
-                            <MenuIcon />
+                            <MenuIcon sx={{color: "#2196F3"}}/>
                         </IconButton>
 
                         <Drawer
@@ -86,11 +89,12 @@ const Navbar = () => {
                                 },
                             }}
                         >
-                            <Box sx={{ p: 2, bgcolor: "#ffffff" }}>
+                            <Box sx={{ p: 2, bgcolor: "#1A1A2E" }}>
                                 <Box
                                     sx={{
                                         display: "flex",
-                                        justifyContent: "flex-end"
+                                        justifyContent: "flex-end",
+                                        color: '#1976d2'
                                     }}
                                 >
                                     <IconButton onClick={toggleDrawer(false)}>
@@ -98,7 +102,7 @@ const Navbar = () => {
                                     </IconButton>
                                 </Box>
                                 {['Home', 'About', 'Contact', 'Help'].map((item) => (
-                                    <MenuItem key={item} component="a" href={`#${item.toLowerCase()}`}>{item}</MenuItem>
+                                    <MenuItem key={item} component="a" href={`#${item.toLowerCase()}`} sx={{color: '#1976d2'}}>{item}</MenuItem>
                                 ))}
                                 <Divider sx={{ my: 3 }} />
                                 <MenuItem>
