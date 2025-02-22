@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Masonry from '@mui/lab/Masonry';
-import { Typography } from '@mui/material';
+import Typography  from '@mui/material/Typography';
 import useIntersectionObserver from './useIntersectionObserver';
 
 const heights = [250, 130, 190, 170, 190, 150, 150, 130, 150, 180];

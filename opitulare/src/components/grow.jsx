@@ -2,7 +2,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Grow from '@mui/material/Grow';
-import ActionAreaCard from './ActionAreaCard';
+import ActionAreaCard from '@mui/material/CardActionArea';
 import Card from './Card';
 
 export default function SimpleGrow({ topic }) {
