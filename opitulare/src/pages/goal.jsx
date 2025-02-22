@@ -4,9 +4,11 @@ import SectionComponent from "@/components/sectionComponent"
 const Goals = () => {
     return (
     <section id='hobbies' className='p-24 mr-16'>
-        <div className='text-white text-base sm:text-lg mb-6 lg:text-5xl'>
-            <h1>Goals</h1>
-        </div>
+            <h3 className="text-white mb-4 text-6xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-teal-400">
+                    Goals
+                </span>
+            </h3>
         <div className='lg:py-16 flex flex-row gap-2 align-middle'>
             <SectionComponent />
         </div>

@@ -4,7 +4,8 @@ import Blog from "@/pages/blog";
 import Footer from "@/pages/footer"
 import Image from "next/image";
 import Goals from "@/pages/goal";
-
+import About from "@/pages/about";
+import Visualizer from "@/pages/visualize";
 
 export default function Home() {
   return (
@@ -12,6 +13,8 @@ export default function Home() {
         <Navbar />
         <Homepage />
         <Blog />
+        <About />
+        <Visualizer />
         <Goals />
         <Footer />
     </main>
