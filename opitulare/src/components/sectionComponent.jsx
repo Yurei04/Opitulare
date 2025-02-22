@@ -1,7 +1,8 @@
 'use client'
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Switch, FormControlLabel } from '@mui/material';
+import Switch from '@mui/material/Switch';
+import FormControlLabel from '@mui/material/FormControlLabel';
 import SimpleGrow from '@/components/grow.jsx';
 
 const section1 = [
