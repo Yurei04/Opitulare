@@ -46,47 +46,48 @@ export default function ControlledAccordions() {
     style={{ backgroundColor: "#121212", padding: "20px", borderRadius: "10px" }}>
       <StyledAccordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1bh-content" id="panel1bh-header">
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>General settings</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>I am an accordion</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>What</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>What is abused?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat.
+          Abuse is any act that harms someone physically, emotionally, sexually, or financially.
           </Typography>
         </AccordionDetails>
       </StyledAccordion>
 
       <StyledAccordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel2bh-content" id="panel2bh-header">
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Users</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>You are currently not an owner</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>Where</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>Where does abused happens</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus.
+          Abuse happens in homes, schools, workplaces, online spaces, and even in public institutions.
           </Typography>
         </AccordionDetails>
       </StyledAccordion>
 
       <StyledAccordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel3bh-content" id="panel3bh-header">
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Advanced settings</Typography>
-          <Typography sx={{ color: 'text.secondary' }}>Filtering has been disabled</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>Why</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>Why does it happen?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Nunc vitae orci ultricies, auctor nunc in, volutpat nisl.
+          People are abused due to power imbalances, control, manipulation, or societal norms that tolerate mistreatment.
           </Typography>
         </AccordionDetails>
       </StyledAccordion>
 
       <StyledAccordion expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel4bh-content" id="panel4bh-header">
-          <Typography sx={{ width: '33%', flexShrink: 0 }}>Personal data</Typography>
+          <Typography sx={{ width: '33%', flexShrink: 0 }}>How</Typography>
+          <Typography sx={{ color: 'text.secondary' }}>How to help?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Integer sit amet egestas eros, vitae egestas augue.
+          Support victims by listening, reporting abuse, offering resources, and encouraging them to seek professional help.
           </Typography>
         </AccordionDetails>
       </StyledAccordion>

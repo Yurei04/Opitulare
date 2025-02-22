@@ -6,7 +6,7 @@ import Masonry from '@mui/lab/Masonry';
 import { Typography } from '@mui/material';
 import useIntersectionObserver from './useIntersectionObserver';
 
-const heights = [250, 130, 190, 170, 190, 100, 150, 130, 150, 80];
+const heights = [250, 130, 190, 170, 190, 150, 150, 130, 150, 180];
 
 const Item = styled(Paper)(() => ({
   backgroundColor: "#1A1A2E",
@@ -19,17 +19,18 @@ const Item = styled(Paper)(() => ({
 }));
 
 const itemData = [
-  { title: "Item", content: "Content 1" },
-  { title: "Item", content: "Content 2" },
-  { title: "Item", content: "Content 3" },
-  { title: "Item", content: "Content 4" },
-  { title: "Item", content: "Content 5" },
-  { title: "Item", content: "Content 6" },
-  { title: "Item", content: "Content 7" },
-  { title: "Item", content: "Content 8" },
-  { title: "Item", content: "Content 9" },
-  { title: "Item", content: "Content 10" },
+  { title: "Recognizing Abuse", content: "Learn the signs of emotional, physical, and sexual abuse in children and teens." },
+  { title: "How to Get Help", content: "A step-by-step guide on where to seek help and report abuse safely." },
+  { title: "Supporting a Friend", content: "How to support a friend who may be experiencing abuse." },
+  { title: "Legal Rights for Survivors", content: "Know the legal protections available for abuse survivors." },
+  { title: "Healing from Trauma", content: "Tips on coping and healing after experiencing abuse." },
+  { title: "Online Safety for Teens", content: "Protecting yourself from online exploitation and grooming." },
+  { title: "Resources for Parents", content: "How parents can identify and prevent child abuse." },
+  { title: "Breaking the Silence", content: "Stories of survivors and their journeys to healing." },
+  { title: "The Impact of Abuse", content: "Understanding the long-term effects of abuse on mental health." },
+  { title: "Reporting Abuse Anonymously", content: "How to report abuse while protecting your identity." },
 ];
+
 
 export default function FixedColumns() {
   const [ref, isVisible] = useIntersectionObserver({
