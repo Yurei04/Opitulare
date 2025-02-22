@@ -14,7 +14,7 @@ export default function PieActiveArc() {
     width: "100%", 
     maxWidth: "1000px", 
     margin: "0 auto", 
-    padding: "10 auto",
+    padding: "20px",
     backgroundColor: "#1A1A2E",
     border: "2px solid #2196F3", 
     borderRadius: "8px",

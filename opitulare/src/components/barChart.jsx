@@ -5,10 +5,10 @@ import { abuseReportData } from '@/data/yearly';
 export default function AbuseReportChart() {
   return (
     <div style={{ 
-      width: "5000", 
-      maxWidth: "5000", 
+      width: "100%", 
+      height: "100%", 
       margin: "0 auto", 
-      padding: "0 auto",
+      padding: "20px",
       alignContent: "center",
       alignItems: "center",
       justifyContent: "center",
@@ -61,3 +61,4 @@ export default function AbuseReportChart() {
     
   );
 }
+
