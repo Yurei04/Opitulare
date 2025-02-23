@@ -51,6 +51,45 @@ To deploy on Vercel:
 npm install -g vercel
 vercel
 ```
+
+
+# Loading Extend Help Chrome Extension Locally
+
+## Prerequisites
+- Install **Google Chrome** or **Microsoft Edge (Chromium-based)**
+- Ensure the extension contains a valid `manifest.json` file
+
+## Steps to Load the Extension
+
+### 1. Open Chrome and Go to Extensions Page
+- Open **Google Chrome**.
+- Type `chrome://extensions/` in the address bar and press **Enter**.
+
+### 2. Enable Developer Mode
+- In the top right corner, toggle **Developer mode** to **ON**.
+
+### 3. Load the Unpacked Extension
+- Click **Load unpacked**.
+- In the file selection window, navigate to the folder where your extension files are stored.
+- Select the folder containing `manifest.json` and click **Select Folder**.
+
+### 4. Verify the Extension is Loaded
+- If successful, the extension will appear in your list of installed extensions.
+- You may see a warning if there are issues with `manifest.json`; resolve any errors accordingly.
+
+### 5. Pin and Test the Extension
+- Click on the **puzzle piece icon** in Chrome’s toolbar (Extensions).
+- Find **Extend Help** and click the **pin icon** to keep it visible.
+- Click the extension icon to check if the hidden help request feature is working as expected.
+
+## Updating the Extension
+If you make changes to the extension’s code:
+- Go to `chrome://extensions/`
+- Click **Reload** under your extension.
+
+Would you like instructions for packaging and publishing the extension to the Chrome Web Store?
+
+```
 Follow the Vercel CLI instructions to complete the deployment.
 
 ## License
